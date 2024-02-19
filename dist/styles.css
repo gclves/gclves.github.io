@@ -1,0 +1,52 @@
+:root {
+	--bg: #ffffcc;
+	--fg: #000000;
+	--body-font: "Go Mono", "Lucida Console", monospace;
+	--accent-font: Go, "Fira Sans", sans-serif;
+}
+
+main {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--body-font);
+  height: 100vh;
+}
+
+#bounce {
+  position: absolute;
+}
+
+/*
+ * Credits to wordart CSS code to: https://www.designpieces.com/2017/03/wordart-css3-text-effects
+ */
+.wordart {
+  font-family: Arial, sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transform: scale(1, 1.5);
+	     -webkit-transform: scale(1, 1.5);
+	     -moz-transform: scale(1, 1.5);
+	     -o-transform: scale(1, 1.5);
+	     -ms-transform: scale(1, 1.5);
+}
+
+.wordart > span {
+  font-family: Times, 'Times New Roman', serif;
+  font-weight: normal;
+  color: #2F5485;
+  text-shadow: 0.03em 0.03em 0px #B3B3B3;
+}
+
+
