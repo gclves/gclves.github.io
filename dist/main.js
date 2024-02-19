@@ -6,8 +6,8 @@ function ready(fn) {
   }
 }
 
-let xSpeed = 1;
-let ySpeed = 1
+let xSpeed = 0.4
+let ySpeed = 0.4
 
 function pageDimensions() {
   const { width, height } = document.querySelector('body').getBoundingClientRect();
