@@ -42,43 +42,18 @@ ready(() => {
     y += ySpeed;
 
     node.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    const collided = detectCollision();
-
-    if (collided) {
-      const nextColor = getNextColor();
-      node.style.color = nextColor;
-    }
+    detectCollision();
   }, 1 / 26)
 
 
   function detectCollision() {
     const box = node.getBoundingClientRect();
-    let collided = false;
 
     if (box.right > width || box.left < 0) { 
       xSpeed = -xSpeed; 
-      collided = true;
     }
-
     if (box.top < 0 || box.bottom > height) {
       ySpeed = -ySpeed;
-      collided = true;
     }
-
-    return collided;
-  }
-
-  let [r, g, b] = [
-  Math.random() * 255, Math.random() * 255, Math.random() * 255
-  ];
-  function getNextColor() {
-    r += 40;
-    // g += 0;
-    b += 5;
-
-    if (r > 255) { r = Math.random() * 255 }
-    if (b > 255) { b = Math.random() * 255 }
-
-    return `rgb(${r}, ${g}, ${b})`;
   }
 })
